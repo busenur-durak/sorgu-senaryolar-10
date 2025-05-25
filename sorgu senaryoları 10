@@ -1,0 +1,28 @@
+1. LEFT JOIN: city ve country tablolarını country_id üzerinden birleştirerek şehir ve ülke isimlerini birlikte getirme
+SELECT 
+    city.city,
+    country.country
+FROM 
+    city
+LEFT JOIN 
+    country ON city.country_id = country.country_id;
+
+2. RIGHT JOIN: customer ve payment tablolarını customer_id üzerinden birleştirerek payment_id, first_name, last_name bilgilerini getirme
+SELECT 
+    payment.payment_id,
+    customer.first_name,
+    customer.last_name
+FROM 
+    customer
+RIGHT JOIN 
+    payment ON customer.customer_id = payment.customer_id;
+
+3. FULL JOIN: customer ve rental tablolarını customer_id üzerinden birleştirerek rental_id, first_name, last_name bilgilerini getirme
+SELECT 
+    rental.rental_id,
+    customer.first_name,
+    customer.last_name
+FROM 
+    customer
+FULL JOIN 
+    rental ON customer.customer_id = rental.customer_id;
